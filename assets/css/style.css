@@ -5,7 +5,12 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-image: url(../images/rodion-kutsaev-8P-uQaTd8rw-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  color: rgb(98, 4, 185);
 }
 
 header {
@@ -17,7 +22,7 @@ header {
   border-bottom: solid 2px purple;
   background-image: url(../images/rodion-kutsaev-8P-uQaTd8rw-unsplash.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: left;
   background-attachment: fixed;
 }
 
@@ -27,44 +32,97 @@ header h1 {
 
 .search-container {
   height: 300px;
-  background-color: blue;
+
   padding: 5px;
   text-align: center;
   font-size: 18px;
-  border-bottom: solid 2px purple;
+  border: solid 2px purple;
+  border-top: none;
 }
 
 .search-box {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: 30px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .search-btn {
   height: 30px;
-  width: 80px;
+  width: 30%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.search-btn:hover {
+  border: 2px solid purple;
+  background-color: rgba(220, 220, 220, 1);
+}
+
+#deleteSearches {
+  border-radius: 15px;
+  background-color: white;
+  border: 2px solid purple;
+  color: black;
+  text-align: center;
+}
+
+#deleteSearches:hover {
+  border-color: red;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+}
+
+.button {
+  border-radius: 15px;
+  background-color: rgb(98, 4, 185);
+  font-weight: bolder;
+  margin: 5px;
 }
 
 .recent-searches {
-    height: auto;
-    background-color: red;
-    text-align: center;
+  height: auto;
+  text-align: center;
+  border: solid 2px purple;
+  border-top: none;
 }
 
 .search-results {
-    background-color: seagreen;
-    height: 400px;
-    text-align: center;
+  background-color: rgba(220, 220, 220, 0.5);
+
+  text-align: center;
+  border-radius: 40%;
 }
 
 .forecast {
-    background-color: slateblue;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 2em;
 }
 
+.fiveDayCards {
+  font-size: 20px;
+  background-color: rgba(220, 220, 220, 0.5);
+  box-shadow: 15px 0px 25px rgb(255, 255, 236);
+  text-align: center;
+  border-radius: 20%;
+}
+
+.present-day {
+  font-size: 24px;
+}
+
+#city {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
 
 @media screen and (max-width: 650px) {
-.grid-x {
+  .grid-x {
     flex-direction: column;
-}
-
+  }
 }

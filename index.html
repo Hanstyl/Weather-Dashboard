@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css'
+        crossorigin='anonymous'>
+    <link rel='stylesheet' href='./assets/css/style.css'>
     <title>Weather Dashboard</title>
 </head>
 
@@ -17,44 +17,78 @@
     </header>
 
     <main>
-        <div class="grid-container full">
-            <div class="grid-x">
+        <!--Search & Recent Search Sections-->
+        <section>
+            <div class='grid-container full'>
+                <div class='grid-x'>
+                    <div class='grid-y medium large-4'>
 
-                <div class="grid-y medium large-4">
-                    <div class="search-container">
-                        <h2>Search for a City</h2>
-                        <input class="search-box" placeholder="Enter City" type="text"> <br>
-                        <button class="search-btn" type="search-btn">Search</button>
+                        <div class='search-container'>
+                            <h2>Search for a City</h2>
+                            <input id='search-input' class='search-box' placeholder='Enter City' type='text'
+                                autocomplete='off'> <br>
+                            <button id='search-btn' class='search-btn' type='search-btn'>Search</button>
+                        </div>
+
+
+                        <div id='search-history' class='recent-searches'>
+                            <h2> Recent Searches</h2>
+                            <button id='deleteSearches' class='button'> Clear All</button><br>
+                        </div>
                     </div>
 
-                    <div class="recent-searches">
-                        <h2> Recent Searches</h2>
+
+
+                    <div class='grid-y cell medium-auto large-8'>
+                        <div class='search-results grid-x'>
+                            <div class='present-day cell large-auto'>
+                                <h2>Current Weather In: <span id='city'></span></h2>
+                                <div id='date1'></div>
+                                <p id='day1'></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-
-
-                <div class="grid-y cell medium-auto large-8">
-                    <div class="search-results">
-                        <h2>Search Results</h2>
-                    </div>
-                </div>
-
-                <div class="forecast cell large-12">
-                    <h2>5 day forecast</h2>
                 </div>
             </div>
+        </section>
+
+        <!--5 Day Forecast-->
+        <section>
+            <div class='grid-container fluid'>
+                <h2 class='forecast cell large-12'>Outlook For The Next Five Days</h2>
+
+                <div class='grid-x grid-margin-x'>
+                    <div class='fiveDayCards cell large-auto'>
+                        <div id='date2'></div>
+                        <p id='day2'></p>
+                    </div>
+                    <div class='fiveDayCards cell large-auto'>
+                        <div id='date3'></div>
+                        <p id='day3'></p>
+                    </div>
+                    <div class='fiveDayCards cell large-auto'>
+                        <div id='date4'></div>
+                        <p id='day4'></p>
+                    </div>
+                    <div class='fiveDayCards cell large-auto'>
+                        <div id='date5'></div>
+                        <p id='day5'></p>
+                    </div>
+                    <div class='fiveDayCards cell large-auto'>
+                        <div id='date6'></div>
+                        <p id='day6'></p>
+                    </div>
+                </div>
+        </section>
 
 
-        </div>
 
 
 
 
-        <div class="weekly-forecast"></div>
-
-        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
-            crossorigin="anonymous"></script>
+        <script src='./assets/js/script.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js'
+            crossorigin='anonymous'></script>
     </main>
 
 </body>
